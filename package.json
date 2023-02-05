@@ -1,0 +1,29 @@
+{
+  "name": "seo-keywords",
+  "version": "0.0.1",
+  "description": "CLI SEO Tool - Generate keyword ideas with Google Autocomplete, Google people also search and People also ask",
+  "bin": {
+    "seo": "./cli.js"
+  },
+  "preferGlobal": true,
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "CLI",
+    "SEO",
+    "SEO-tool",
+    "SerpApi"
+  ],
+  "author": "https://github.com/Mykhailo-Zub",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^10.0.0",
+    "dotenv": "^16.0.3",
+    "figlet": "^1.5.2",
+    "inquirer": "^9.1.4",
+    "serpapi": "^1.1.0"
+  }
+}
