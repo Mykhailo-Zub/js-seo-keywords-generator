@@ -21,13 +21,13 @@ npm i seo-keywords
 Usage example:
 
 ```bash
-seo-keywords get <search  query>
+seo get <search  query>
 ```
 
 Usage options:
 
 ```bash
-seo-keywords help get
+seo help get
 ```
 
 ## In code usage
