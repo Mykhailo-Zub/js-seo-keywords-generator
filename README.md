@@ -1,6 +1,13 @@
-## About
+# 🔎Google SEO Keywords Generator
 
-SEO Keywords generator - Generate keyword ideas with Google's Autocomplete, People also search and People also ask. Scrape results obtained using [SerpApi](https://serpapi.com/).
+This small tool has CLI and in-code interfaces. It is used to generate keyword ideas using [Google's Autocomplete](https://serpapi.com/google-autocomplete-api), [People also search](https://serpapi.com/related-searches) and [People also ask](https://serpapi.com/related-questions) results and save them to TXT, CSV, JSON file. Scrape results were obtained using [SerpApi](https://serpapi.com/).
+
+Currently supports:
+
+- Google search
+- other engines soon.
+
+📌Note: If you want to use this tool for personal or commercial purposes, you must register on [SerpApi](https://serpapi.com/) and get your own API key (no credit card needed, free plan available). The default API key used is for informational purposes only.
 
 ## Install
 
@@ -18,17 +25,37 @@ npm i seo-keywords
 
 ## CLI Usage
 
+Before use, you must add an environment variable `API_KEY` with [your API key from SerpApi](https://serpapi.com/manage-api-key). [Read more](https://en.wikipedia.org/wiki/Environment_variable) how to add it in different systems.
+
 Usage example:
 
 ```bash
 seo get <search  query>
 ```
 
+The GIF below shows you a usage example:
+![seo-tool-usage](https://user-images.githubusercontent.com/64033139/217038504-a9ba063c-9941-478c-8e70-ae0f9b2fbc6c.gif)
+
 Usage options:
 
 ```bash
 seo help get
 ```
+
+<details>
+<summary>Available arguments</summary>
+  -e, --engine <engine(s)...>      Parameter defines the engine(s) of use. It can be set to "paa" (People Also Ask), "rs" (Related Searches),
+                                   "ac" (Autocomplete), or in any combination, e.g. "paa,rs,ac" (default). (default: ["paa","rs","ac"])
+  -d, --domain <google domain>     Parameter defines the Google domain to use. It defaults to google.com. Head to the https://serpapi.com/google-domains
+                                   for a full list of supported Google domains. (default: "google.com")
+  -gl, --country <country code>    Parameter defines the country to use for the Google search. Head to the https://serpapi.com/google-countries for
+                                   a full list of supported Google countries. (default: "us")
+  -hl, --language <language code>  Parameter defines the language to use for the Google search. Head to the https://serpapi.com/google-languages for
+                                   a full list of supported Google languages. (default: "en")
+  -dl, --depth <depth limit>       Parameter defines the depth of disclosure of questions for People Also Ask (default: "1")
+  -ft, --type <file type>          Parameter defines the type of file to save. (choices: "json", "txt", "csv", default: "json")
+  -h, --help                       display help for command
+</details>
 
 ## In code usage
 
@@ -37,6 +64,11 @@ Import `SEO` to your file:
 ```javascript
 import SEO from "seo-keywords";
 ```
+
+Before use, you need to define [your API key from SerpApi](https://serpapi.com/manage-api-key). There are several ways to do this:
+
+- Add an environment variable `API_KEY` with your key. [Read more](https://en.wikipedia.org/wiki/Environment_variable) how to add it in different systems;
+- Add your key directly in code: `SEO.api_key = "your_api_key"`.
 
 Usage example:
 
@@ -56,9 +88,13 @@ getRelatedSearch(query[, domain[, country[, language]]])
 getAutocomplete(query[, domain[, country[, language]]])
 ```
 
-- `query` - search query;
-- `engines` - parameter defines the engine(s) of use. It can be set to "paa" (People Also Ask), "rs" (Related Searches), "ac" (Autocomplete), or in any combination, e.g. "paa,ac";
-- `domain` - parameter defines the Google domain to use. It defaults to google.com. Head to the [Google domains page](https://serpapi.com/google-domains) for a full list of supported Google domains. Default is "google.com";
-- `country` - parameter defines the country to use for the Google search. Head to the [Google countries page](https://serpapi.com/google-countries) for a full list of supported Google countries. Default is "us";
-- `language` - parameter defines the language to use for the Google search. Head to the [Google languages page](https://serpapi.com/google-languages) for a full list of supported Google languages. Default is "en";
-- `depthlimit` - Parameter defines the depth of disclosure of questions for People Also Ask. Default is "1" (Only for People Also Ask engine);
+- `query` - search query.
+- `engines` - parameter defines the engine(s) of use:
+  - `paa` (People Also Ask)
+  - `rs` (Related Searches)
+  - `ac` (Autocomplete)
+  - could be combined: `paa, ac`
+- `domain` - parameter defines the Google domain to use. Head to the [Google domains page](https://serpapi.com/google-domains) for a full list of supported Google domains. Default is `google.com`.
+- `country` - parameter defines the country to use for the Google search. Head to the [Google countries page](https://serpapi.com/google-countries) for a full list of supported Google countries. Default is `us`.
+- `language` - parameter defines the language to use for the Google search. Head to the [Google languages page](https://serpapi.com/google-languages) for a full list of supported Google languages. Default is `en`.
+- `depthlimit` - parameter defines the depth of disclosure of questions for People Also Ask. Default is `1` (Only for People Also Ask engine).

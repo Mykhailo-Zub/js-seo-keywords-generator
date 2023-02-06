@@ -1,17 +1,19 @@
 import { Command, Option } from "commander";
+import { createRequire } from "module";
+const require = createRequire(import.meta.url);
 const program = new Command();
 import { getResults, parseEngines } from "../helpers/enginesHelper.js";
 import { saveFile } from "../helpers/filesHelper.js";
 import { logError, logSearchParams, logTitle, logWarning, removeLoader, setLoader } from "../helpers/logHelper.js";
+const packageJson = require("../package.json");
 
-program
-  .name("seo")
-  .description("SerpApi SEO Tool - Generate keyword ideas with Google's Autocomplete, People also search and People also ask")
-  .version("0.0.1");
+const { description, version } = packageJson;
+
+program.name("seo").description(description).version(version);
 
 program
   .command("get")
-  .description("Get and save results from supported engines")
+  .description("Get results from supported engines and save to supported file (txt, csv, json)")
   .argument("<query>", "search query")
   .option(
     "-e, --engine <engine(s)...>",

@@ -20,6 +20,7 @@ const SEO = {
   getAutocomplete: async (query, domain = "google.com", country = "us", language = "en") => {
     return getResults(["ac"], query, domain, country, language);
   },
+  api_key: undefined,
 };
 
 export default SEO;

@@ -1,7 +1,7 @@
 {
-  "name": "seo-keywords",
+  "name": "seo-keywords-generator",
   "version": "0.0.1",
-  "description": "CLI SEO Tool - Generate keyword ideas with Google Autocomplete, Google people also search and People also ask",
+  "description": "SerpApi CLI SEO Keyword Generator Tool. Generates keyword ideas from Google Autocomplete, Google People Also Search and People Also Ask",
   "bin": {
     "seo": "./cli.js"
   },
@@ -15,7 +15,10 @@
     "CLI",
     "SEO",
     "SEO-tool",
-    "SerpApi"
+    "SerpApi",
+    "seo-keywords",
+    "seo-keywords-generator",
+    "keywords-generator"
   ],
   "author": "https://github.com/Mykhailo-Zub",
   "license": "MIT",
