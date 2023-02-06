@@ -14,13 +14,13 @@ Currently supports:
 If you want to use SEO Keywords generator as CLI and save results in a file, you need to install it globally:
 
 ```bash
-npm i -g seo-keywords
+npm i -g seo-keywords-generator
 ```
 
 If you want to get results from SEO Keywords generator in your Node.js app, you need to add it to your project dependency:
 
 ```bash
-npm i seo-keywords
+npm i seo-keywords-generator
 ```
 
 ## CLI Usage
