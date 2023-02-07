@@ -1,6 +1,6 @@
 {
-  "name": "seo-keywords-generator",
-  "version": "0.0.2",
+  "name": "js-seo-keywords-generator",
+  "version": "0.0.1",
   "description": "SerpApi CLI SEO Keyword Generator Tool. Generates keyword ideas from Google Autocomplete, Google People Also Search and People Also Ask",
   "bin": {
     "seo": "./cli.js"
@@ -20,6 +20,13 @@
     "seo-keywords-generator",
     "keywords-generator"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mykhailo-Zub/js-seo-keywords-generator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Mykhailo-Zub/js-seo-keywords-generator/issues"
+  },
   "author": "https://github.com/Mykhailo-Zub",
   "license": "MIT",
   "dependencies": {
