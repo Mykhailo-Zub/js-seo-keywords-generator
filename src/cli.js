@@ -45,10 +45,11 @@ program
     const language = options.language;
     const depthlimit = options.depth;
     const fileType = options.type;
+    console.log(engines);
     const unknownEngine = engines.find((el) => el !== "paa" && el !== "rs" && el !== "ac");
     if (unknownEngine) {
       console.error(
-        `${logError(`Error: engine "${unknownEngine}" is not found. Awailable choises is "paa", "rs" and "ac".`)}\n${logWarning(
+        `${logError(`Error: engine "${unknownEngine}" is not found. Available choises is "paa", "rs" and "ac".`)}\n${logWarning(
           "Operation aborted!"
         )}`
       );

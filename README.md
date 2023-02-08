@@ -42,19 +42,25 @@ seo help get
 <details>
 <summary>Available arguments</summary>
 
--e, --engine <engine(s)...> — Parameter defines the engine(s) of use. It can be set to "paa" (People Also Ask), "rs" (Related Searches), "ac" (Autocomplete), or in any combination, e.g. "paa,rs,ac" (default). (default: ["paa","rs","ac"]);
-
--d, --domain <google domain> — Parameter defines the Google domain to use. It defaults to google.com. Head to the https://serpapi.com/google-domainsfor a full list of supported Google domains. (default: "google.com");
-
--gl, --country <country code> — Parameter defines the country to use for the Google search. Head to the https://serpapi.com/google-countries for a full list of supported Google countries. (default: "us");
-
--hl, --language <language code> — Parameter defines the language to use for the Google search. Head to the https://serpapi.com/google-languages for a full list of supported Google languages. (default: "en");
-
--dl, --depth <depth limit> — Parameter defines the depth of disclosure of questions for People Also Ask (default: "1");
-
--ft, --type <file type> — Parameter defines the type of file to save. (choices: "json", "txt", "csv", default: "json")
-
--h, --help — Display help for command.
+```lang-none
+  -e, --engine <engine(s)...>      Parameter defines the engine(s) of use. It can be set to "paa" (People Also Ask),
+                                   "rs" (Related Searches), "ac" (Autocomplete), or in any combination, e.g.
+                                   "paa,rs,ac" (default). (default: ["paa","rs","ac"])
+  -d, --domain <google domain>     Parameter defines the Google domain to use. It defaults to google.com. Head to the
+                                   https://serpapi.com/google-domains for a full list of supported Google domains.
+                                   (default: "google.com")
+  -gl, --country <country code>    Parameter defines the country to use for the Google search. Head to the
+                                   https://serpapi.com/google-countries for a full list of supported Google countries.
+                                   (default: "us")
+  -hl, --language <language code>  Parameter defines the language to use for the Google search. Head to the
+                                   https://serpapi.com/google-languages for a full list of supported Google languages.
+                                   (default: "en")
+  -dl, --depth <depth limit>       Parameter defines the depth of disclosure of questions for People Also Ask (default:
+                                   "1")
+  -ft, --type <file type>          Parameter defines the type of file to save. (choices: "json", "txt", "csv", default:
+                                   "json")
+  -h, --help                       display help for command
+```
 
 </details>
 
