@@ -45,7 +45,6 @@ program
     const language = options.language;
     const depthlimit = options.depth;
     const fileType = options.type;
-    console.log(engines);
     const unknownEngine = engines.find((el) => el !== "paa" && el !== "rs" && el !== "ac");
     if (unknownEngine) {
       console.error(

@@ -1,7 +1,8 @@
 import { getAutocompleteResults, getPeopleAlsoAskAndRelatedSearchesResults } from "../src/serpApi.js";
 
 export const parseEngines = (value) => {
-  return value.split(" ");
+  const unifiedValue = value.replaceAll(",", " ");
+  return unifiedValue.split(" ");
 };
 
 export const getResults = async (engines, query, domain, country, language, depthlimit) => {
