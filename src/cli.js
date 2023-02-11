@@ -36,7 +36,7 @@ program
     "Parameter defines the language to use for the Google search. Head to the https://serpapi.com/google-languages for a full list of supported Google languages.",
     "en"
   )
-  .option("-dl, --depth <depth limit>", "Parameter defines the depth of disclosure of questions for People Also Ask", "1")
+  .option("-dl, --depth <depth limit>", "Parameter defines the depth of disclosure of questions for People Also Ask. Max depth is 3.", "1")
   .addOption(new Option("-ft, --type <file type>", "Parameter defines the type of file to save.").choices(["json", "txt", "csv"]).default("json"))
   .action(async (query, options) => {
     const engines = options.engine;
@@ -51,6 +51,12 @@ program
         `${logError(`Error: engine "${unknownEngine}" is not found. Available choises is "paa", "rs" and "ac".`)}\n${logWarning(
           "Operation aborted!"
         )}`
+      );
+      return;
+    }
+    if (depthlimit > 3 || depthlimit < 1) {
+      console.error(
+        `${logError(`Error: Depth limit "${depthlimit}" is incorrect. Available depth from 1 to 3.`)}\n${logWarning("Operation aborted!")}`
       );
       return;
     }

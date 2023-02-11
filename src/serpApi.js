@@ -14,24 +14,19 @@ export const getPeopleAlsoAskAndRelatedSearchesResults = async (searchParams, de
     if (depthLimit > 1) {
       const getDepthResults = async (token, depth) => {
         const depthResults = await getJson("google_related_questions", { next_page_token: token });
-        if (depthResults?.related_questions) {
-          peopleAlsoAsk.push(...depthResults.related_questions?.map((el) => el.question));
-          if (depth < depthLimit) {
-            for (const question of depthResults.related_questions) {
-              if (!question.next_page_token) {
-                continue;
-              }
+        if (depthResults?.related_questions && depth < depthLimit) {
+          for (const question of depthResults.related_questions) {
+            peopleAlsoAsk.push(question.question);
+            if (question.next_page_token) {
               await getDepthResults(question.next_page_token, depth + 1);
             }
           }
         }
       };
-      const questions = [...results.related_questions];
-      for (const question of questions) {
-        if (!question.next_page_token) {
-          continue;
+      for (const question of results.related_questions) {
+        if (question.next_page_token) {
+          await getDepthResults(question.next_page_token, 0);
         }
-        await getDepthResults(question.next_page_token, depthLimit);
       }
     }
   }
