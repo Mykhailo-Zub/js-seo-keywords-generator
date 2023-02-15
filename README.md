@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/64033139/217038504-a9ba063c-9941-478c-8e70-ae0f9b2fbc6c.gif" width="550" alt="animated" />
+</p>
+
 # 🔎Google SEO Keywords Generator
 
 This small tool has CLI and in-code interfaces. It is used to generate keyword ideas using [Google's Autocomplete](https://serpapi.com/google-autocomplete-api), [People also search](https://serpapi.com/related-searches) and [People also ask](https://serpapi.com/related-questions) results and save them to TXT, CSV, JSON file. Scrape results were obtained using [SerpApi](https://serpapi.com/).
@@ -64,8 +68,7 @@ seo help get
 
 </details>
 
-The GIF below shows you a usage example:
-![seo-tool-usage](https://user-images.githubusercontent.com/64033139/217038504-a9ba063c-9941-478c-8e70-ae0f9b2fbc6c.gif)
+📌Note: The depth limit parameter for People Also Ask can be set from 1 to 3. This limit is set because for each depth value, the number of results returned grows exponentially, for example, if the number of results is `5` at each level, for a depth of `3`, the total number of results will be equals `125`.
 
 ## In code usage
 
@@ -108,3 +111,5 @@ getAutocomplete(query[, domain[, country[, language]]])
 - `country` - parameter defines the country to use for the Google search. Head to the [Google countries page](https://serpapi.com/google-countries) for a full list of supported Google countries. Default is `us`.
 - `language` - parameter defines the language to use for the Google search. Head to the [Google languages page](https://serpapi.com/google-languages) for a full list of supported Google languages. Default is `en`.
 - `depthlimit` - parameter defines the depth of disclosure of questions for People Also Ask. Default is `1` (Only for People Also Ask engine).
+
+📌Note: The depth limit parameter for People Also Ask can be set from 1 to 3. This limit is set because for each depth value, the number of results returned grows exponentially, for example, if the number of results is `5` at each level, for a depth of `3`, the total number of results will be equals `125`.
