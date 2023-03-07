@@ -114,4 +114,6 @@ getAutocomplete(query[, domain[, country[, language]]])
 
 📌Note: The depth limit parameter for People Also Ask can be set from 1 to 3. This limit is set because for each depth value, the number of results returned grows exponentially, for example, if the number of results is `5` at each level, for a depth of `3`, the total number of results will be equals `125`.
 
+## Extra content
+
 Read more usage examples in [JavaScript SEO Keywords Research Tool: Google Autocomplete, People Also Ask, and People Also Search For](https://serpapi.com/blog/google-seo-keywords-generator-tool-nodejs/) blog post.

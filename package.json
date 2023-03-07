@@ -1,6 +1,6 @@
 {
   "name": "js-seo-keywords-generator",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "SerpApi CLI SEO Keyword Generator Tool. Generates keyword ideas from Google Autocomplete, Google People Also Search and People Also Ask",
   "bin": {
     "seo": "./cli.js"
