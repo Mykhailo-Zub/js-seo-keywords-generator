@@ -1,3 +1,13 @@
+<div align="center">
+<p>Special thanks to:</p>
+<div>
+  <img src="https://sindresorhus.com/assets/thanks/serpapi-logo-light.svg" width="140" alt="SerpApi">
+</div>
+<a href="https://serpapi.com">
+  <b>API to get search engine results with ease.</b>
+</a>
+</div>
+
 <p align="center">
   <img src="https://user-images.githubusercontent.com/64033139/217038504-a9ba063c-9941-478c-8e70-ae0f9b2fbc6c.gif" width="550" alt="animated" />
 </p>
