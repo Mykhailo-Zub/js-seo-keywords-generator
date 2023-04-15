@@ -8,11 +8,13 @@
 </a>
 </div>
 
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/64033139/217038504-a9ba063c-9941-478c-8e70-ae0f9b2fbc6c.gif" width="550" alt="animated" />
-</p>
+<h2 align="center">
+  Google SEO Keywords Generator
+</h2>
 
-# 🔎Google SEO Keywords Generator
+<div align="center">
+   <img src="https://user-images.githubusercontent.com/78694043/231948051-1b122f0b-7a55-4e8c-9c7a-e90cc5ec4dc7.svg" width="600" alt="js-seo-keywords-generator">
+</div>
 
 This small tool has CLI and in-code interfaces. It is used to generate keyword ideas using [Google's Autocomplete](https://serpapi.com/google-autocomplete-api), [People also search](https://serpapi.com/related-searches) and [People also ask](https://serpapi.com/related-questions) results and save them to TXT, CSV, JSON file. Scrape results were obtained using [SerpApi](https://serpapi.com/).
 
@@ -38,6 +40,10 @@ npm i js-seo-keywords-generator
 ```
 
 ## CLI Usage
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/64033139/217038504-a9ba063c-9941-478c-8e70-ae0f9b2fbc6c.gif" width="550" alt="animated" />
+</p>
 
 Before use, you must add an environment variable `API_KEY` with [your API key from SerpApi](https://serpapi.com/manage-api-key). [Read more](https://en.wikipedia.org/wiki/Environment_variable) how to add it in different systems.
 
