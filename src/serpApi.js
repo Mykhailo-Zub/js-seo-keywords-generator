@@ -3,7 +3,7 @@ import { config, getJson } from "serpapi";
 import SEO from "../index.js";
 
 dotenv.config();
-config.api_key = process.env.API_KEY || SEO.api_key || "83bd9d6ce07a161441f4cdbc234456c79ebdf677a8d706d4b5dfcb0e962c2b05";
+config.api_key = process.env.API_KEY || SEO?.api_key || "83bd9d6ce07a161441f4cdbc234456c79ebdf677a8d706d4b5dfcb0e962c2b05";
 
 export const getPeopleAlsoAskAndRelatedSearchesResults = async (searchParams, depthLimit) => {
   const results = await getJson("google", searchParams);
